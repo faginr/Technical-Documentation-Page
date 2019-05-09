@@ -3,77 +3,68 @@
 <head>
 	<title>Technical Documentation Page</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<!-- 
-	User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation).
-User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5.
-User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.
-User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "Javascript and Java" should have a corresponding id="Javascript_and_Java").
-User Story #5: The .main-section elements should contain at least 10 p elements total (not each).
-User Story #6: The .main-section elements should contain at least 5 code elements total (not each).
-User Story #7: The .main-section elements should contain at least 5 li items total (not each).
-User Story #8: I can see a nav element with a corresponding id="navbar".
-User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation.
-User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section.
-User Story #11: The header element in the navbar must come before any link (a) elements in the navbar.
-User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").
-User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.
-User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
-User Story #15: My Technical Documentation page should use at least one media query.
-
-	 -->
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet"> 
 </head>
 <body>
 	<nav id="nav-bar">
-		<header>Digital Music Production</header>
+		<header id="header">Digital Music Production</header>
 		<ul>
-			<a href="">Overview</a>
-			<a href="">Requirements</a>
-			<a href="">Setup</a>
+			<a href="#Overview" class="nav-item">Overview</a>
+			<a href="#Requirements" class="nav-item">Requirements</a>
+			<a href="#Setup" class="nav-item">Setup</a>
+			<a href="#Getting" class="nav-item">Getting Started</a>
+			<a href="#Global" class="nav-item">Global Basics</a>
+			<a href="#Recording" class="nav-item">Recording</a>
+			<a href="#Pulling" class="nav-item">Pulling it All Together</a>
+			<a href="#Exporting" class="nav-item">Exporting</a>
 		</ul>
 	</nav>
 	<main id="main-doc">
 		<section class="main-section">
-			<header>Overview</header>
+			<header class="subtitle" id="Overview">Overview</header>
 				<p>So you want to make music. These days with the advent of modern digital technology, a lot can be accomplished with a simple laptop, a few pieces of hardware, and some basic software. Just getting started? No need to drop thousands of dollars on expensive and often complex equipment. This simple guide will give you all the tools you need to begin your foray into the rewarding field of modern musical production.</p>
 				<p></p>
 		</section>
 		<section class="main-section">
-			<header>Requirements</header>
-				<p>Before beginning, their are some baseline considerations that need to be met in order to have a usable working environment. Trying to force an underpowered workstation beyond its limits will end in hours wasted in frustration with little to nothing to show for it. In order to have a usable setup, the following basic items need to be present:</p>
+			<header class="subtitle" id="Requirements">Requirements</header>
+				<p><strong>Before beginning</strong>, their are some baseline considerations that need to be met in order to have a usable working environment. Trying to force an underpowered workstation beyond its limits will end in hours wasted in frustration with little to nothing to show for it. In order to have a usable setup, the following basic items need to be present:</p>
 				<ul>
-					<li>Computer. This is the central piece that drives the rest. Specifics will be covered later on.</li>
-					<li>Audio Playback. There's not much point in making music if you can't hear it. Speakers are recommended but headphones can work ok if you are just starting out.<li>
-					<li>These two are necessary. If you want to expand your abilities, consider the following:</li>
-					<li>Optional: Hard synth. Keyboards are the top compostion tools of the musical world for a reason. The highly visual nature of the keyboard is very useful in crafting music, whatever the type. Start with a solid budget option, and upgrade as you hit its limits.</li>
-					<li>Optional: Audio Interface. Not only will this improve audio output controls, it will also also for real instruments and microphones to be recorded. Depending on the style of music this could be intergral to the sound.</li>
+					<li><em><strong>Computer:</strong></em> This is the central piece that drives the rest. Specifics will be covered later on.</li>
+					<li><em><strong>Audio Playback:</strong></em> There's not much point in making music if you can't hear it. Speakers are recommended but headphones can work ok if you are just starting out.<li>
+					<p>These two are necessary. If you want to expand your abilities, consider the following:<p>
+					<li><em><strong>(Optional) Hard synth:</strong></em> Keyboards are the top compostion tools of the musical world for a reason. The highly visual nature of the keyboard is very useful in crafting music, whatever the type. Start with a solid budget option, and upgrade as you hit its limits.</li>
+					<li><em><strong>(Optional) Audio Interface:</strong></em> Not only will this improve audio output controls, it will also also for real instruments and microphones to be recorded. Depending on the style of music this could be intergral to the sound.</li>
 				</ul>	
 		</section>
 		<section class="main-section">
-			<header>Setup</header>
+			<header class="subtitle" id="Setup">Setup</header>
 				<p>Now that you have the tools, let's learn how to set them up for success. The two main componenets to making music on your computer are Software and Hardware. Let's take a quick look at each.</p>
-				<p>Software</p>
+				<p><strong>Software</strong></p>
 				<p>On the software side of things, there are several components to install and configure into working order.</p>
-				<p>Driver</p>
+				<p><strong>Driver</strong></p>
 				<p>The driver will handle all of the inputs and outputs from the main software as requests to and from the computer. The simplest, easiest and cheapest (free) solution is a community built one that many people utilize called ASIO4ALL. Simply download and install and the driver will be taken care of (note: an audio interface may have its own driver to install and use).</p>
-				<p>Audio Software</p>
+				<p><strong>Audio Software</strong></p>
 				<p>There are many options for audio software out on the market today. A relatively inexpensive, robust, and free to try option is Reaper by cuckos. Again download and install.</p>
-				<p>Plugins</p>
+				<p><strong>Plugins</strong></p>
 				<p>This section will make more sense once you get started, but essentially the effects and virtual instruments at your disposal come down to the plugins you have installed. A good place to start is to look up and try free plugins first, and purchase professional options once you have more experinece.</p>
 				<p>Now lets look at Hardware.</p>
-				<p>Hardware</p>
-				<li>Mid-tier computer: at a minimum, a computer will need:</li>
+				<p><strong>Hardware</strong></p>
+				<p><strong>Mid-tier computer:</strong> at a minimum, a computer will need:</p>
 					<ul>
-						<li>Multi-core processor. Dual core is okay, quad core (or more) is better. Anything older will be too slow.</li>
-						<li>1GB Ram. Most new computers should have 2 or 4 GB (or more) and more is always better.</li>
-						<li>160GB Storage. Technically you can use less, but if you start making lots of projects you will soon run out of space. SSDs will also speed up loading times.</li>
+						<li><em>Multi-core processor.</em> Dual core is okay, quad core (or more) is better. Anything older will be too slow.</li>
+						<li><em>1GB Ram.</em> Most new computers should have 2 or 4 GB (or more) and more is always better.</li>
+						<li><em>160GB Storage.</em> Technically you can use less, but if you start making lots of projects you will soon run out of space. SSDs will also speed up loading times.</li>
 					</ul>
-				<p>Audio Playback. Many things will work here. Ideally you would have multiple devices to test your work on a variety of playback devices. A good set of speakers is the best for mixing and mastering, but good headphones or even cheap earbuds can work if you have nothing else.</p>
-				<p>HardSynth (Optional). Its not totally necessary, but having a piano keyboard to help you compose will help greatly in the composition process, from melody to rhythm. Being able to record through the device is also a very useful tool. May require additional cords.</p>	
-				<p>Audio Interface (Optional). Once you get further along, you may want to invest in an Audio Interface that plugs into your computer. Having dedicated drivers, powered inputs including phantom power, monitoring, and a host of othre benefits will enhance everything you do.</p>
+				<p><strong>Audio Playback</strong></p> 
+				<p>Many things will work here. Ideally you would have multiple devices to test your work on a variety of playback devices. A good set of speakers is the best for mixing and mastering, but good headphones or even cheap earbuds can work if you have nothing else.</p>
+				<p><strong>HardSynth (Optional)</strong></p>
+				<p>Its not totally necessary, but having a piano keyboard to help you compose will help greatly in the composition process, from melody to rhythm. Being able to record through the device is also a very useful tool. May require additional cords.</p>	
+				<p><strong>Audio Interface (Optional)</strong></p>
+				<p>Once you get further along, you may want to invest in an Audio Interface that plugs into your computer. Having dedicated drivers, powered inputs including phantom power, monitoring, and a host of othre benefits will enhance everything you do.</p>
 		</section>
 		<section class="main-section">
-			<header>Getting Started</header>
-				<p>Settings/Configurations</p>
+			<header class="subtitle" id="Getting">Getting Started</header>
+				<p><strong>Settings/Configurations</strong></p>
 				<p>You will need to make sure everything is in working order before you begin, or you may spend an hour wondering why you can't hear anything, only to find your speakers were unplugged the whole time./p>
 				<p>A quick checklist to run through:</p>
 				<ul>
@@ -86,7 +77,7 @@ User Story #15: My Technical Documentation page should use at least one media qu
 			
 		</section>
 		<section class="main-section">
-			<header>Global Basics</header>
+			<header class="subtitle" id="Global">Global Basics</header>
 				<p>Ok! Let's get going on a great song....hold on. First we need to know what the heck everything is. The first place to start are the global controls, as these will apply to every subsequent thing we do.</p>
 				<p>The DAW layout is fairly strightforward once the user is familiar with it.</p>
 				<p>The top is the menu bar. Most functions can be found here and there are many to play around with. The basics will be New files, Opening Files, Saving Files, Exporting, and Midi items.</p>
@@ -97,7 +88,7 @@ User Story #15: My Technical Documentation page should use at least one media qu
 				
 		</section>
 		<section class="main-section">
-			<header>Recording</header>
+			<header class="subtitle" id="Recording">Recording</header>
 				<p>Tracks can come in two main flavors, midi and audio clips. Midi is programmable directly into the computer with a mouse, keyboard, or a midi device such as a hard synth if you have one. Without and device inputs, you will have to stick with midi to make tracks.</p>
 				<p>With no devices, you will want to add a new midi item to write your music in. Add it to the first track, and give the track a name for its role. Load a virtual instrument up and make sure its making sound. Now open your midi item. Most modern DAWs will default to using a piano roll to write music on. Start dragging pitches out for different periods of time, play them back and edit them. This takes time and is where you will start to form your ideas into playable music.</p>
 				<p>If you have a midi device, you can record straight from your instrument, and the computer will write the midi for you. You can edit times and pitches after the fact as well. Make sure to give yourself some play-in space so you are ready to record in time with the music!</p>
@@ -106,13 +97,13 @@ User Story #15: My Technical Documentation page should use at least one media qu
 			
 		</section>
 		<section class="main-section">
-			<header>Pulling it All Together</header>
+			<header class="subtitle" id="Pulling">Pulling it All Together</header>
 				<p>Taking initial ideas to completion is usually a lot of work and requires dedication. Don't give up! Add tracks, edit your clips and keep working. Clips can be copied and pasted to help speed up the composition process. They can also be faded in and out for effect. Try fading out the end of your piece slowly. Maybe take a track that sounds off and play it on another instrument. Automtion can also create professional sounding effects when done correctly. Try programming volume fluxuations, or increasing/decreasing the amount of an effect used over time. These tools can be very efficient at performing a lot of sound manipulation over time. Practice is the key.</p>
 			
 			
 		</section>
 			<section class="main-section">
-			<header>Exporting</header>
+			<header class="subtitle" id="Exporting">Exporting</header>
 				<p>Finally done? Hang on! Before your work is finished, you want to make sure its mastered and exported so that everyone can hear what you hear. Mixing and Mastering is a deep subjet, but the basic premise is to edit the sound so that everything fits together nicely, without anything too loud or too quiet. Usually a master channel will have its own volume and possibly effects for you to mess with. Try to get everything sounding as good as you can.</p>
 				<p>Finally you can save your file, and render it. You will want to use your computers resources to decide how big you want the file and how high of quality the sound will be. Watch and make sure none of the piece clips above 0dB or you may get some feedback. You can always go back and re-render if you don't get it right the first time.</p>
 				<p>That's it! Your music is created and fit for playing anywhere you can play it. Hopefully this guide helped you get started on a long and fruitful journey into digital music!</p>
